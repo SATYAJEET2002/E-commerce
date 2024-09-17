@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body 
+        {
+		    background: url('images/background.jpg') no-repeat center center fixed;
+		    background-size: cover;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    background-color: #f0f0f0;
+		}
+        
+
+        form {
+            width: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency here */
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+        }
+
+        form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="tel"],
+        form input[type="email"],
+        form input[type="submit"],
+        form input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .box a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box"> 
+<form action="LoginServlet?url=Loginpage2.html" method="get">
+<h2>Login</h2>
+			<input type="hidden" name="action" value="login">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <br>
+            <input type="submit" value="login">
+            <br>           
+</form>
+</div>
+</body>
+
+</html>
